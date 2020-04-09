@@ -1,4 +1,4 @@
-# Running OpenBSD SPARC on qemu (Linux, FreeBSD)
+# Running OpenBSD SPARC on QEMU (for Linux and FreeBSD)
 
 This will document how to run OpenBSD *SPARC* (sun4m) on [QEMU](https://www.qemu.org/ "QEMU")
 
@@ -19,7 +19,6 @@ SPARC VM, fun!**
 
 Pick *Linux* or *FreeBSD*, it's up to you.
 
-
 # Getting Wine #
 
  * FreeBSD: $ fetch https://download.qemu.org/qemu-4.2.0.tar.xz
@@ -27,5 +26,23 @@ Pick *Linux* or *FreeBSD*, it's up to you.
 
 # Building Wine #
 
-1.  For *FreeBSD*
+
+1. **tar -Jxvf qemu-4.2.0.tar.xz**
+2. **cd qemu-4.2.0**
+3. **export PREFIX=/usr/local/wine-4.2.0/**
+4. **./configure --prefix=$PREFIX --target-list=sparc-softmmu** if you see an 
+   error here it's probably because your system is missing of some development packages
+5. For *Linux* use make (**Add -jN where N is the number of cpu cores you have**) and
+   for *FreeBSD* use **gmake** (this can be installed with **pkg install gmake**)
+6. Then if the build was successful use *make install* (Linux) or *gmake install* (FreeBSD)
+
+
+# Testing QEMU SPARC #
+
+1. Execute: */usr/local/qemu-4.2.0/bin/qemu-system-sparc* 
+   You should see the window and the *OpenBIOS* output
+
+
+#  
+
 
