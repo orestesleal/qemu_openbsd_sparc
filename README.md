@@ -9,8 +9,8 @@ and running.
 
 # Requirements #
 
-Get the following:  - [OpenBSD 5.8](https://mirror.transip.net/openbsd/5.8/sparc/install58.iso "OpenBSD 5.8/SPARC - install cd")
-                    - [Wine sources](https://download.qemu.org/qemu-4.2.0.tar.xz "Wine 4.2.0 source")
-                    - [FreeBSD](https://www.freebsd.org/ "FreeBSD")
-                    - [Linux](https://distrowatch.com/ "Pick your distro as a service (PYDAAS)")
+Get the following :  - [OpenBSD 5.8](https://mirror.transip.net/openbsd/5.8/sparc/install58.iso "OpenBSD 5.8/SPARC - install cd")
+                     - [Wine sources](https://download.qemu.org/qemu-4.2.0.tar.xz "Wine 4.2.0 source")
+                     - [FreeBSD](https://www.freebsd.org/ "FreeBSD")
+                     - [Linux](https://distrowatch.com/ "Pick your distro as a service (PYDAAS)")
 
