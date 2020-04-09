@@ -3,9 +3,7 @@
 This will document how to run OpenBSD *SPARC* (sun4m) on [QEMU](https://www.qemu.org/ "QEMU")
 
 
-Markup :  __Strong text__ or **Strong text**
-
-Markup: **NOTE: OpenBSD's SPARC 32bit port is discontinued (latest release was 5.9). This document will show
+**NOTE: OpenBSD's SPARC 32bit port is discontinued (latest release was 5.9). This document will show
 how to build qemu, get the neccesary files, etc. to get this port up and running. In this way you
 will have a OpenBSD SPARC VM, fun!**
 
