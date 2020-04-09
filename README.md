@@ -7,3 +7,7 @@ how to build qemu, get the neccesary files, etc. to get this *SPARC* port up
 and running.
 
 
+# Requirements #
+
+[named Link](https://mirror.transip.net/openbsd/5.8/sparc/install58.iso "OpenBSD 5.8 install cd")
+
