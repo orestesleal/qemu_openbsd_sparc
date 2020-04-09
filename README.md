@@ -9,5 +9,5 @@ and running.
 
 # Requirements #
 
-[named Link](https://mirror.transip.net/openbsd/5.8/sparc/install58.iso "OpenBSD 5.8 install cd")
+[OpenBSD 5.8 CD](https://mirror.transip.net/openbsd/5.8/sparc/install58.iso "OpenBSD 5.8 install cd")
 
