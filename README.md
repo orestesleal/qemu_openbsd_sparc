@@ -62,7 +62,7 @@ Linux:
 
 FreeBSD:
 ```
-gmake install
+ # gmake install
 ```
 
 # Testing QEMU SPARC #
