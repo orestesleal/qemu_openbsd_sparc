@@ -39,7 +39,11 @@ Pick *Linux* or *FreeBSD*, it's up to you.
 
 # Testing QEMU SPARC #
 
-1. Execute: */usr/local/qemu-4.2.0/bin/qemu-system-sparc -nographic* 
+Execute the following:
+
+```
+/usr/local/qemu-4.2.0/bin/qemu-system-sparc -nographic
+```
 
 You should see the *OpenBIOS* output, like the following:
 ```
