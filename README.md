@@ -100,7 +100,7 @@ Now type: *power-off*  on the *OpenBIOS* prompt and press  *ENTER* to shutdown.
 # Creating the virtual disk  
 
 First, select a location for your VM disk, configuration, etc. then use a command
-like the followig (adjust at your convenience)
+like the following (adjust at your convenience)
 ```
 /usr/local/qemu-4.2.0/bin/qemu-img  create -f qcow2 openbsd-sparc.disk 4G
 ```
