@@ -152,7 +152,7 @@ This is perl 5, version 20, subversion 2 (v5.20.2) built for sparc-openbsd
 ```
 
 # NOTE
-This methid will not use kernel acceleration, since on *AMD64* 
+This method will not use kernel acceleration, since on *AMD64* 
 architectures anything that is not the same arch will use 
 full software emulation. With that said, with a normal *CPU* 
 you will be able to use the VM without issues, to install
