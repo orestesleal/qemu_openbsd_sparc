@@ -81,7 +81,7 @@ Now type: *power-off*  on the *OpenBIOS* prompt and press  *ENTER* to shutdown.
 
 Save the file and make it executable 
 ```
-chmod u+x run-sparc.sh*)
+chmod u+x run-sparc.sh
 ```
 And run the script to begin the installation.
 When finish, remove the last line from the script and run your *OpenBSD* *SPARC* VM.
@@ -107,12 +107,10 @@ This is perl 5, version 20, subversion 2 (v5.20.2) built for sparc-openbsd
 
 
 # NOTE
-```
- This will not use kernel acceleration, since on *AMD64* architectures
-      anything that is not the same arch will use full emulation. With that said,
-      with a normal *CPU* you will be able to use the VM without issues, install
-      packages, etc.
-```
+This will not use kernel acceleration, since on *AMD64* architectures
+anything that is not the same arch will use full emulation. With that said,
+with a normal *CPU* you will be able to use the VM without issues, install
+packages, etc.
 
 
 Orestes,
