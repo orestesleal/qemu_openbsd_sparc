@@ -21,15 +21,30 @@ Pick *Linux* or *FreeBSD*, it's up to you.
 
 # Getting Wine #
 
- * FreeBSD: $ fetch https://download.qemu.org/qemu-4.2.0.tar.xz
- * Linux: $ wget https://download.qemu.org/qemu-4.2.0.tar.xz or curl https://download.qemu.org/qemu-4.2.0.tar.xz -O
+
+Select a destination directory where the sources will be uncompressed, make sure you have 
+at least 1GB of free space there. Then proceed to download the qemu source code.
+
+
+FreeBSD: 
+```
+ $ fetch https://download.qemu.org/qemu-4.2.0.tar.xz
+```
+Linux:
+```
+$ wget https://download.qemu.org/qemu-4.2.0.tar.xz 
+
+   or 
+
+$ curl https://download.qemu.org/qemu-4.2.0.tar.xz -O
+```
 
 # Building Wine #
 
 ```
-tar -Jxvf qemu-4.2.0.tar.xz
-cd qemu-4.2.0
-export PREFIX=/usr/local/wine-4.2.0/
+$ tar -Jxvf qemu-4.2.0.tar.xz
+$ cd qemu-4.2.0
+$ export PREFIX=/usr/local/wine-4.2.0/
 ./configure --prefix=$PREFIX --target-list=sparc-softmmu 
 ```
 
@@ -38,8 +53,17 @@ missing of some development packages
 
 For *Linux* use make (**Add -jN where N is the number of cpu cores you have**) and
 for *FreeBSD* use **gmake** (this can be installed with **pkg install gmake**)
-If the build was successful use *make install* (Linux) or *gmake install* (FreeBSD)
+If the build was successful, then become root (or use sudo) to install the software
 
+Linux:
+```
+ # make install 
+```
+
+FreeBSD:
+```
+gmake install
+```
 
 # Testing QEMU SPARC #
 
