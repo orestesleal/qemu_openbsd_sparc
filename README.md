@@ -72,32 +72,38 @@ Now type: *power-off*  on the *OpenBIOS* prompt and press  *ENTER* to shutdown.
 # Creating a configuration file to run qemu
 
 *run-sparc.sh*
-
+```
 /usr/local/qemu-4.2.0/bin/qemu-system-sparc \
         -drive file=openbsd-sparc.disk,if=scsi,bus=0,unit=0,media=disk \
         -nographic \
         -drive file=install58.iso,format=raw,if=scsi,bus=0,unit=2,media=cdrom,readonly=on
+```
 
-Save it, make it executable (*chmod u+x run-sparc.sh*), and run the script to begin the installation.
+Save the file and make it executable 
+```
+chmod u+x run-sparc.sh*)
+```
+And run the script to begin the installation.
 When finish, remove the last line from the script and run your *OpenBSD* *SPARC* VM.
 
 By default *QEMU* creates an internal network, with his own *DHCP* server, etc. and your *VM*
 will have networking by using the *le* driver internally.
 
 # Output from a running vm:
+```
+uname -a 
+OpenBSD sparcfoobar.my.domain 5.8 GENERIC#0 sparc
 
-# uname -a 
-> OpenBSD sparcfoobar.my.domain 5.8 GENERIC#0 sparc
+cc -v
+Reading specs from /usr/lib/gcc-lib/sparc-unknown-openbsd5.8/4.2.1/specs
+Target: sparc-unknown-openbsd5.8
+Configured with: OpenBSD/sparc system compiler
+Thread model: posix
+gcc version 4.2.1 20070719 
 
-# cc -v
-> Reading specs from /usr/lib/gcc-lib/sparc-unknown-openbsd5.8/4.2.1/specs
-> Target: sparc-unknown-openbsd5.8
-> Configured with: OpenBSD/sparc system compiler
-> Thread model: posix
-> gcc version 4.2.1 20070719 
-
-# perl -v
-> This is perl 5, version 20, subversion 2 (v5.20.2) built for sparc-openbsd
+perl -v
+This is perl 5, version 20, subversion 2 (v5.20.2) built for sparc-openbsd
+```
 
 
 # NOTE
