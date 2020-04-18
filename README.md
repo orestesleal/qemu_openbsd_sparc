@@ -42,7 +42,7 @@ Pick *Linux* or *FreeBSD*, it's up to you.
 1. Execute: */usr/local/qemu-4.2.0/bin/qemu-system-sparc -nographic* 
 
 You should see the *OpenBIOS* output, like the following:
-
+```
 Configuration device id QEMU version 1 machine id 32
 Probing SBus slot 0 offset 0
 Probing SBus slot 1 offset 0
@@ -60,8 +60,9 @@ Trying disk...
 No valid state has been set by load or init-program
 
 0 > 
+```
 
-Now type: *power-off*  on the *OpenBIOS* prompt to shutdown.
+Now type: *power-off*  on the *OpenBIOS* prompt and press  *ENTER* to shutdown.
 
 
 # Creating the virtual disk  
