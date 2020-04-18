@@ -39,10 +39,75 @@ Pick *Linux* or *FreeBSD*, it's up to you.
 
 # Testing QEMU SPARC #
 
-1. Execute: */usr/local/qemu-4.2.0/bin/qemu-system-sparc* 
-   You should see the window and the *OpenBIOS* output
+1. Execute: */usr/local/qemu-4.2.0/bin/qemu-system-sparc -nographic* 
+
+You should see the *OpenBIOS* output, like the following:
+
+Configuration device id QEMU version 1 machine id 32
+Probing SBus slot 0 offset 0
+Probing SBus slot 1 offset 0
+Probing SBus slot 2 offset 0
+Probing SBus slot 3 offset 0
+Probing SBus slot 4 offset 0
+Probing SBus slot 5 offset 0
+Invalid FCode start byte
+CPUs: 1 x FMI,MB86904
+UUID: 00000000-0000-0000-0000-000000000000
+Welcome to OpenBIOS v1.1 built on Oct 28 2019 17:08
+  Type 'help' for detailed information
+Trying disk:a...
+Trying disk...
+No valid state has been set by load or init-program
+
+0 > 
+
+Now type: *power-off*  on the *OpenBIOS* prompt to shutdown.
 
 
-#  
+# Creating the virtual disk  
+
+1. */usr/local/qemu-4.2.0/bin/qemu-img  create -f qcow2 openbsd-sparc.disk 4G*
+
+# Creating a configuration file to run qemu
+
+*run-sparc.sh*
+
+/usr/local/qemu-4.2.0/bin/qemu-system-sparc \
+        -drive file=openbsd-sparc.disk,if=scsi,bus=0,unit=0,media=disk \
+        -nographic \
+        -drive file=install58.iso,format=raw,if=scsi,bus=0,unit=2,media=cdrom,readonly=on
+
+Save it, make it executable (*chmod u+x run-sparc.sh*), and run the script to begin the installation.
+When finish, remove the last line from the script and run your *OpenBSD* *SPARC* VM.
+
+By default *QEMU* creates an internal network, with his own *DHCP* server, etc. and your *VM*
+will have networking by using the *le* driver internally.
+
+Output from a running vm:
+
+# uname -a 
+OpenBSD sparcfoobar.my.domain 5.8 GENERIC#0 sparc
+
+# cc -v
+Reading specs from /usr/lib/gcc-lib/sparc-unknown-openbsd5.8/4.2.1/specs
+Target: sparc-unknown-openbsd5.8
+Configured with: OpenBSD/sparc system compiler
+Thread model: posix
+gcc version 4.2.1 20070719 
+
+# perl -v
+This is perl 5, version 20, subversion 2 (v5.20.2) built for sparc-openbsd
+
+
+NOTE: This will not use kernel acceleration, since on *AMD64* architectures
+      anything that is not the same arch will use full emulation. With that said,
+      with a normal *CPU* you will be able to use the VM without issues, install
+      packages, etc.
+
+
+Orestes,
+April, 2020.
+
+
 
 
