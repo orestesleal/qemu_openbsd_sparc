@@ -83,26 +83,29 @@ When finish, remove the last line from the script and run your *OpenBSD* *SPARC*
 By default *QEMU* creates an internal network, with his own *DHCP* server, etc. and your *VM*
 will have networking by using the *le* driver internally.
 
-Output from a running vm:
+# Output from a running vm:
 
 # uname -a 
-OpenBSD sparcfoobar.my.domain 5.8 GENERIC#0 sparc
+> OpenBSD sparcfoobar.my.domain 5.8 GENERIC#0 sparc
 
 # cc -v
-Reading specs from /usr/lib/gcc-lib/sparc-unknown-openbsd5.8/4.2.1/specs
-Target: sparc-unknown-openbsd5.8
-Configured with: OpenBSD/sparc system compiler
-Thread model: posix
-gcc version 4.2.1 20070719 
+> Reading specs from /usr/lib/gcc-lib/sparc-unknown-openbsd5.8/4.2.1/specs
+> Target: sparc-unknown-openbsd5.8
+> Configured with: OpenBSD/sparc system compiler
+> Thread model: posix
+> gcc version 4.2.1 20070719 
 
 # perl -v
-This is perl 5, version 20, subversion 2 (v5.20.2) built for sparc-openbsd
+> This is perl 5, version 20, subversion 2 (v5.20.2) built for sparc-openbsd
 
 
-NOTE: This will not use kernel acceleration, since on *AMD64* architectures
+# NOTE
+```
+ This will not use kernel acceleration, since on *AMD64* architectures
       anything that is not the same arch will use full emulation. With that said,
       with a normal *CPU* you will be able to use the VM without issues, install
       packages, etc.
+```
 
 
 Orestes,
